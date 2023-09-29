@@ -3,38 +3,41 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Otimiza.ai | Otimiza.ai</title>
+  <title>Otimiza.ai | Boost your business with AI</title>
+  <link rel="icon" href="favicon.ico" type="image/ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="sitemap" href="sitemap.xml">
-  <link rel="icon" href="../assets/images/file-18b706d4-1da8-4eee-abbc-1428cebea373.png">
+  <link rel="sitemap" href="https://www.mixo.io/site/otimiza-ai-cacsm/sitemap.xml">
+  <link rel="icon" href="../favicon.ico">
   <meta name="description"
     content="Boost your business with AI. Streamline your tasks and enhance productivity with AI tools from Otimiza.ai">
-  <meta property="og:url" content="otimiza-ai-cacsm.html">
+  <meta property="og:url" content="https://otimiza.ai">
   <meta property="og:title" content="Otimiza.ai | Otimiza.ai">
-  <meta property="og:site_name" content="Otimiza.html">
+  <meta property="og:site_name" content="Otimiza.ai">
   <meta property="og:type" content="website">
   <meta property="og:description"
     content="Boost your business with AI. Streamline your tasks and enhance productivity with AI tools from Otimiza.ai">
-  <meta property="og:image" content="../assets/images/default-social-otimizaAi-1695847501865.png">
+  <meta property="og:image"
+    content="https://storage.googleapis.com/mixo-files/uploads/default-social-otimizaAi-1695847501865.png">
   <meta property="og:image:alt" content="Otimiza.ai | Otimiza.ai">
-  <meta property="twitter:url" content="otimiza-ai-cacsm.html">
+  <meta property="twitter:url" content="https://otimiza.ai">
   <meta property="twitter:title" content="Otimiza.ai | Otimiza.ai">
   <meta property="twitter:description"
     content="Boost your business with AI. Streamline your tasks and enhance productivity with AI tools from Otimiza.ai">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:image:src" content="../assets/images/default-social-otimizaAi-1695847501865.png">
-  <meta property="generator" content="îles">
+  <meta property="twitter:image:src"
+    content="https://storage.googleapis.com/mixo-files/uploads/default-social-otimizaAi-1695847501865.png">
+
   <link rel="stylesheet" href="../assets/style-96054763.css">
   <link rel="stylesheet" href="../assets/otimiza.css">
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <!-- <script src="../assets/scripts/otimiza.js"></script> -->
-  <script
-    nonce="b0e46ba9-48ad-4ac2-bee1-735cec1d2ecd">(function (w, d) { !function (a, b, c, d) { a[c] = a[c] || {}; a[c].executed = []; a.zaraz = { deferred: [], listeners: [] }; a.zaraz.q = []; a.zaraz._f = function (e) { return async function () { var f = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: f }) } }; for (const g of ["track", "set", "debug"]) a.zaraz[g] = a.zaraz._f(g); a.zaraz.init = () => { var h = b.getElementsByTagName(d)[0], i = b.createElement(d), j = b.getElementsByTagName("title")[0]; j && (a[c].t = b.getElementsByTagName("title")[0].text); a[c].x = Math.random(); a[c].w = a.screen.width; a[c].h = a.screen.height; a[c].j = a.innerHeight; a[c].e = a.innerWidth; a[c].l = a.location.href; a[c].r = b.referrer; a[c].k = a.screen.colorDepth; a[c].n = b.characterSet; a[c].o = (new Date).getTimezoneOffset(); if (a.dataLayer) for (const n of Object.entries(Object.entries(dataLayer).reduce(((o, p) => ({ ...o[1], ...p[1] })), {}))) zaraz.set(n[0], n[1], { scope: "page" }); a[c].q = []; for (; a.zaraz.q.length;) { const q = a.zaraz.q.shift(); a[c].q.push(q) } i.defer = !0; for (const r of [localStorage, sessionStorage]) Object.keys(r || {}).filter((t => t.startsWith("_zaraz_"))).forEach((s => { try { a[c]["z_" + s.slice(7)] = JSON.parse(r.getItem(s)) } catch { a[c]["z_" + s.slice(7)] = r.getItem(s) } })); i.referrerPolicy = "origin"; i.src = "../assets/scripts/otimiza.js?z=" + btoa(encodeURIComponent(JSON.stringify(a[c]))); h.parentNode.insertBefore(i, h) };["complete", "interactive"].includes(b.readyState) ? zaraz.init() : a.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document);</script>
+  <script src="../assets/scripts/otimiza.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
 </head>
 
-<body>
+<body id="content">
   <div id="app">
     <div>
       <div class="bg-white overflow-hidden" data-testid="site-content"><ile-root id="ile-1">
@@ -46,6 +49,10 @@
                     alt="Otimiza.ai logo">
                   <p class="font-sans font-bold text-gray-900 sr-only text-4xl">Otimiza.ai</p>
                 </a>
+                <div class="language-switcher">
+                  <span class="flag" id="usa" onclick="location.href='/';" style="cursor:pointer;"></span>
+                  <span class="flag" id="brazil" onclick="location.href='/pt';" style="cursor:pointer;"></span>
+                </div>
                 <div class="flex items-center space-x-2 lg:hidden"><!---->
                   <button type="button" id="open-mobile-menu"
                     class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-600"><span
@@ -56,14 +63,12 @@
                         clip-rule="evenodd"></path>
                     </svg></button>
                 </div>
-                <div class="language-switcher">
-                  <span class="flag" id="usa" onclick="location.href='/';" style="cursor:pointer;"></span>
-                  <span class="flag" id="brazil" onclick="location.href='/pt';" style="cursor:pointer;"></span>
-              </div>
+                
                 <div class="hidden lg:flex lg:gap-x-12">
-                  <a href="#how-we-help" class="text-sm font-semibold leading-6 capitalize">How we can help</a>
-                  <a href="#vision" class="text-sm font-semibold leading-6 capitalize">Our Vision</a>
-                  <a href="#book-call" class="text-sm font-bold font-semibold leading-6 capitalize">Book a Free Call</a>                                
+                  <a href="#how-we-help" class="text-sm font-semibold leading-6 capitalize">Como podemos ajudar</a>
+                  <a href="#how-we-work" class="text-sm font-semibold leading-6 capitalize">Como Trabalhamos</a>
+                  <a href="#vision" class="text-sm font-semibold leading-6 capitalize">Nossa Visão</a>                  
+                  <a href="#book-call" class="text-sm font-bold font-semibold leading-6 capitalize">Agendar Reunião</a>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:space-x-4"><!----></div>
               </nav>
@@ -73,7 +78,7 @@
             </div>
           </div>
         </ile-root>
-        <script></script>        
+        <script></script>
         </script>
         <div class="section-spacing">
           <section id="hero" class="overflow-hidden lg:relative pt-12 sm:pt-20 md:pt-24 lg:pt-32" sectionname="hero"
@@ -83,24 +88,22 @@
               <div class="relative z-[1]">
                 <div class="">
                   <div class="mt-6 sm:max-w-xl">
-                    <h1 class="text-4xl font-black tracking-tight text-gray-900 sm:text-6xl xl:text-7xl">Boost your
-                      business with AI</h1>
-                    <h2 class="prose prose-user mt-6 text-lg text-gray-500 sm:text-xl"><span>Streamline your tasks and
-                        enhance the productivity of co-workers with AI tailor-made to your company.</span></h2>
+                    <h1 class="text-4xl font-black tracking-tight text-gray-900 sm:text-6xl xl:text-7xl">Impulsione sua
+                      empresa com IA</h1>
+                    <h2 class="prose prose-user mt-6 text-lg text-gray-500 sm:text-xl"><span>Otimize suas tarefas e
+                        aumente a produtividade com as ferramentas de IA feitas para o seu negócio.</span></h2>
                   </div>
                   <div class="mt-10 space-y-4">
-                    <p class="text-sm text-gray-400">Let&#39;s talk to understand your needs first</p>
+                    <p class="text-sm text-gray-400">Vamos conversar? Quero entender como podemos te ajudar</p>
                     <ile-root id="ile-3" class="mt-4 sm:max-w-lg" data-v-app="" hydrated="">
                       <form
                         class="grid gap-2 grid-cols-1 sm:w-full sm:flex sm:items-center sm:flex-wrap mt-4 sm:max-w-lg"
-                        data-site-id="pCyauNWbE4LmmhlCwaxw"><label for="hero-email" class="sr-only">Email
-                          address</label><input id="hero-email" type="email"
+                        data-site-id="pCyauNWbE4LmmhlCwaxw"><label for="hero-email" class="sr-only">Email corporativo
+                        </label><input id="hero-email" type="email"
                           class="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring-primary focus-visible:ring-primary flex-1"
                           required="" placeholder="Enter your company email...">
                         <div><a to="" class="ui-button ui-button-base ui-button-primary" style="cursor: pointer;"
-                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/otimiza-ai/ai-consultancy-discovery'});return false;">Book
-                            a
-                            Call</a></div>
+                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/otimiza-ai/consultoria-gratuita'});return false;">Agendar Consultoria Gratuita</a></div>
                         <!-- Calendly link widget begin -->
                         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
                         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"
@@ -139,8 +142,8 @@
                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292Z">
                           </path>
                         </svg></div>
-                      <div class="min-w-0 py-1 text-sm text-gray-500 pl-3">Enhanced productivity</div>
-                      <div class="min-w-0 py-1 text-sm text-gray-500 pl-3">Streamlined processes</div>
+                      <div class="min-w-0 py-1 text-sm text-gray-500 pl-3">Aumentar Produtividade</div>
+                      <div class="min-w-0 py-1 text-sm text-gray-500 pl-3">Simplificar processos</div>
                     </div>
                   </div><!-- User Review -->
                   <div class="mt-6">
@@ -148,8 +151,9 @@
                         class="object-cover inline-block mr-3 border-2 border-primary rounded-full sm:mr-2 h-14 w-14">
                       <div>
                         <p class="sm:pl-2.5 text-base font-black tracking-tight text-gray-800 sm:text-lg"> “Otimiza.ai
-                          has revolutionized our workflow. It has saved us countless hours and improved our efficiency
-                          significantly.” </p>
+                          revolucionou nosso fluxo de trabalho. Isso nos poupou inúmeras horas e melhorou nossa
+                          eficiência
+                          significativamente.” </p>
                         <p class="sm:pl-2.5 text-sm sm:text-base font-bold text-gray-500">Lucy Jones <span
                             class="text-xs font-normal text-gray-400 sm:text-sm">(CEO of InfoAI)</span></p>
                       </div>
@@ -159,7 +163,8 @@
               </div>
             </div>
             <div class="sm:pl-6">
-              <div class="pt-12 sm:relative sm:mt-12 sm:pt-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 z-20" style="z-index: 9;">
+              <div class="pt-12 sm:relative sm:mt-12 sm:pt-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 z-20"
+                style="z-index: 9;">
                 <div class="hidden sm:block">
                   <div
                     class="absolute inset-y-0 w-screen left-1/2 bg-gray-50 rounded-l-3xl lg:left-80 lg:right-0 lg:w-full">
@@ -194,10 +199,11 @@
                   class="lg:col-start-2 lg:mx-0 lg:px-0 lg:pr-8 max-w-xl px-4 mx-auto space-y-6 sm:px-6 lg:py-28 xl:py-32 2xl:mx-0">
                   <!-- Feature -->
                   <div>
-                    <h2 class="text-4xl font-extrabold tracking-tight text-gray-900">Increase productivity</h2>
-                    <div class="mt-4 prose prose-user text-lg leading-relaxed text-gray-500 sm:text-xl">AI Boost helps
-                      businesses increase productivity by automating repetitive tasks, allowing employees to focus on
-                      more strategic activities.</div>
+                    <h2 class="text-4xl font-extrabold tracking-tight text-gray-900">Aumentar Produtividade</h2>
+                    <div class="mt-4 prose prose-user text-lg leading-relaxed text-gray-500 sm:text-xl">Usar IA ajuda
+                      as empresas aumentam a produtividade automatizando tarefas repetitivas, permitindo que os
+                      funcionários se concentrem em
+                      atividades mais estratégicas.</div>
                   </div><!-- CTA -->
                   <div></div><!-- Review -->
                 </div><!-- Image -->
@@ -218,9 +224,11 @@
                   class="lg:mx-auto lg:max-w-3xl xl:pl-12 2xl:pl-20 2xl:justify-self-end max-w-xl px-4 mx-auto space-y-6 sm:px-6 lg:py-28 xl:py-32 2xl:mx-0">
                   <!-- Feature -->
                   <div>
-                    <h2 class="text-4xl font-extrabold tracking-tight text-gray-900">Streamline processes</h2>
-                    <div class="mt-4 prose prose-user text-lg leading-relaxed text-gray-500 sm:text-xl">With AI Boost,
-                      businesses can streamline their processes and eliminate manual work, saving time and resources.
+                    <h2 class="text-4xl font-extrabold tracking-tight text-gray-900">Simplificar Processos</h2>
+                    <div class="mt-4 prose prose-user text-lg leading-relaxed text-gray-500 sm:text-xl">Se você possui
+                      processos repetitivos que tomam tempo na sua empresa, este é um clássico exemplo de perda de
+                      eficiência que integrar IA pode otimizar o tempo de sua equipe e diminiur drasticamente o erro
+                      humano envolvido.
                     </div>
                   </div><!-- CTA -->
                   <div></div><!-- Review -->
@@ -242,10 +250,11 @@
                   class="lg:col-start-2 lg:mx-0 lg:px-0 lg:pr-8 max-w-xl px-4 mx-auto space-y-6 sm:px-6 lg:py-28 xl:py-32 2xl:mx-0">
                   <!-- Feature -->
                   <div>
-                    <h2 class="text-4xl font-extrabold tracking-tight text-gray-900">Make data-driven decisions</h2>
-                    <div class="mt-4 prose prose-user text-lg leading-relaxed text-gray-500 sm:text-xl">AI Boost
-                      provides businesses with valuable insights and data analysis, enabling them to make informed
-                      decisions and drive growth.</div>
+                    <h2 class="text-4xl font-extrabold tracking-tight text-gray-900">Decisões Baseadas em Dados</h2>
+                    <div class="mt-4 prose prose-user text-lg leading-relaxed text-gray-500 sm:text-xl">Integrar
+                      Inteligência Artificial é uma ótima maneira de fornecer às empresas insights valiosos e análises
+                      de dados, permitindo-lhes tomar decisões informadas
+                      decisões e impulsionar o crescimento.</div>
                   </div><!-- CTA -->
                   <div></div><!-- Review -->
                 </div><!-- Image -->
@@ -261,14 +270,18 @@
               </div>
             </div>
           </section>
-          <section id="how-it-work" aria-labelledby="policy-heading" class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8"
-            sectionname="policies" icon="HeroiconsSolidStar" id="policies" sectioncomponent="Policies"
-            sectionlabel="Policies" sortorder="3" section-component="Policies" site-name="Otimiza.ai"
-            site-id="pCyauNWbE4LmmhlCwaxw"
+          <section id="how-we-work" aria-labelledby="policy-heading"
+            class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8" sectionname="policies" icon="HeroiconsSolidStar"
+            id="policies" sectioncomponent="Policies" sectionlabel="Policies" sortorder="3" section-component="Policies"
+            site-name="Otimiza.ai" site-id="pCyauNWbE4LmmhlCwaxw"
             site-logo-url="https://storage.googleapis.com/mixo-sites/images/file-18b706d4-1da8-4eee-abbc-1428cebea373.png"
             site-logo-size="xl" hide-site-name="true" site-config="[object Object]" header-visible="true"
             reselecting-images="false">
-            <div class="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8">
+            <h2
+              class="text-3xl font-black tracking-tight text-gray-900 sm:text-4xl md:text-5xl md:leading-tight md:max-w-4xl md:mx-auto"
+              data-v-782fc14d>Sua Empresa + Otimiza.ai = 🚀</h2>
+            <div class="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8"
+              style="margin-top:50px">
               <div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
                   role="img" class="w-16 h-auto text-primary iconify iconify--material-symbols" client:load=""
                   width="1em" height="1em" viewBox="0 0 24 24">
@@ -276,9 +289,10 @@
                     d="m10.6 13.8l-2.15-2.15q-.275-.275-.7-.275t-.7.275q-.275.275-.275.7t.275.7L9.9 15.9q.3.3.7.3t.7-.3l5.65-5.65q.275-.275.275-.7t-.275-.7q-.275-.275-.7-.275t-.7.275L10.6 13.8ZM12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Z">
                   </path>
                 </svg>
-                <h3 class="mt-6 text-base font-medium text-gray-900">Expert Guidance</h3>
-                <p class="mt-3 text-base text-gray-500">Our team of experts will guide you through every step of the AI
-                  implementation process, ensuring that you can maximize the benefits of AI for your business.</p>
+                <h3 class="mt-6 text-base font-medium text-gray-900">Entendendo o Problema</h3>
+                <p class="mt-3 text-base text-gray-500">Nossa equipe de especialistas irá identificar junto com você
+                  quais os problemas e processos de sua empresa que podem ser otimizados, garantindo que você possa
+                  maximizar os benefícios da Inteligência Artificial no seu negócio.</p>
               </div>
               <div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
                   role="img" class="w-16 h-auto text-primary iconify iconify--material-symbols" client:load=""
@@ -287,9 +301,10 @@
                     d="M11 11.8V15q0 .425.288.713T12 16q.425 0 .713-.288T13 15v-3.2l.9.9q.275.275.7.275t.7-.275q.275-.275.275-.7t-.275-.7l-2.6-2.6q-.3-.3-.7-.3t-.7.3l-2.6 2.6q-.275.275-.275.7t.275.7q.275.275.7.275t.7-.275l.9-.9ZM12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Z">
                   </path>
                 </svg>
-                <h3 class="mt-6 text-base font-medium text-gray-900">Practical Solutions</h3>
-                <p class="mt-3 text-base text-gray-500">We offer practical solutions to streamline your tasks and
-                  enhance productivity. Our AI tools are designed to help you achieve your business goals.</p>
+                <h3 class="mt-6 text-base font-medium text-gray-900">Soluções Práticas</h3>
+                <p class="mt-3 text-base text-gray-500">Após identificado os problemas, definimos juntos as métricas de
+                  sucesso e o plano de ação que caiba no seu bolso. Gostamos de construir soluções em etapas para você
+                  ver resultado rápido.</p>
               </div>
               <div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
                   role="img" class="w-16 h-auto text-primary iconify iconify--material-symbols" client:load=""
@@ -298,9 +313,10 @@
                     d="m10.65 15.75l4.875-3.125q.35-.225.35-.625t-.35-.625L10.65 8.25q-.375-.25-.763-.038t-.387.663v6.25q0 .45.388.663t.762-.038ZM12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Z">
                   </path>
                 </svg>
-                <h3 class="mt-6 text-base font-medium text-gray-900">Ongoing Support</h3>
-                <p class="mt-3 text-base text-gray-500">We provide ongoing support and training to ensure that your team
-                  is equipped to leverage AI tools effectively.</p>
+                <h3 class="mt-6 text-base font-medium text-gray-900">Suporte Constante</h3>
+                <p class="mt-3 text-base text-gray-500">Fornecemos suporte e treinamento contínuos para garantir que sua
+                  equipe
+                  está equipado para aproveitar as ferramentas de IA de forma eficaz.</p>
               </div>
               <div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
                   role="img" class="w-16 h-auto text-primary iconify iconify--material-symbols" client:load=""
@@ -309,9 +325,10 @@
                     d="M11 13v3q0 .425.288.713T12 17q.425 0 .713-.288T13 16v-3h3q.425 0 .713-.288T17 12q0-.425-.288-.713T16 11h-3V8q0-.425-.288-.713T12 7q-.425 0-.713.288T11 8v3H8q-.425 0-.713.288T7 12q0 .425.288.713T8 13h3Zm1 9q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Z">
                   </path>
                 </svg>
-                <h3 class="mt-6 text-base font-medium text-gray-900">Customized Strategies</h3>
-                <p class="mt-3 text-base text-gray-500">We understand that every business is unique. That's why we offer
-                  customized strategies to ensure that our AI tools are tailored to meet your specific business needs.
+                <h3 class="mt-6 text-base font-medium text-gray-900">Estratégias Personalizadas</h3>
+                <p class="mt-3 text-base text-gray-500">Entendemos que cada negócio é único. É por isso que precisamos
+                  conhecer sua operação e geralmente desenvolver estratégias
+                  personalizadas para atender a sua realidade.
                 </p>
               </div>
             </div>
@@ -323,18 +340,22 @@
             site-logo-size="xl" hide-site-name="true" header-visible="true" reselecting-images="false">
             <div
               class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16">
-              <h2 class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">Why Choose
+              <h2 class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">Por que escolher a
                 Otimiza.ai</h2>
-              <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Optimization isn't just about efficiency;
-                it's about evolution. As the digital landscape evolves, so do the challenges and opportunities
-                businesses face.</p>
-              <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">With over fifteen years of experience in
-                digital solutions, our founder has led the way in harnessing the power of AI for business optimization.
-                Today, we are proud to offer tailored AI integrations that help businesses reach their full potential.
+              <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">A otimização não envolve apenas
+                eficiência;
+                trata-se de evolução. À medida que o cenário digital evolui, também evoluem os desafios e as
+                oportunidades
+                as empresas enfrentam.</p>
+              <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Com mais de quinze anos de experiência em
+                soluções digitais, nosso fundador abriu caminho no aproveitamento do poder da IA para otimização de
+                negócios.
+                Hoje, temos orgulho de oferecer integrações de IA personalizadas que ajudam as empresas a atingir todo o
+                seu potencial.
               </p>
-              <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">With otimiza.ai, you're choosing a
-                partner that understands the nuances of AI, has a proven track record, and is committed to ensuring your
-                business not only adapts but thrives in this AI-driven era.</p>
+              <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Com o otimiza.ai você está escolhendo um
+                parceiro que entende as nuances da IA, tem um histórico comprovado e está comprometido em garantir seu
+                os negócios não apenas se adaptam, mas também prosperam nesta era impulsionada pela IA.</p>
               <div
                 class="mx-auto mt-20 flex flex-wrap max-w-lg items-center justify-center gap-x-8 gap-y-12 sm:max-w-xl sm:gap-x-10 sm:gap-y-14 lg:max-w-4xl">
                 <div><!----><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -408,18 +429,18 @@
               <div class="relative">
                 <blockquote>
                   <div class="max-w-2xl mx-auto mt-6 italic text-white sm:text-lg">
-                    <p> &quot;We see a world where AI isn’t the bad guy - it’s the co-pilot of each co-worker.<br> It’s
-                      not about stealing jobs, but supercharging them. Imagine your team unleashed from the mundane,
-                      their talents amplified, soaring to new heights of creativity and innovation.
+                    <p> &quot;Vemos um mundo onde a IA não é a vilã - ela é a co-pilota de cada colaborador.<br> Não se
+                      trata de roubar empregos, mas de potencializá-los.
+                      Imagine sua equipe liberta das tediosas rotinas diárias, seus talentos amplificados, atingindo
+                      novos patamares de criatividade e inovação.
                       <br>
-                      We get it, change can be scary. But together, we can turn that fear into fuel. AI is more than
-                      tech; it’s a partner that works 24/7, ensuring your business isn’t just in the game but setting
-                      the pace.
+                      Entendemos que a mudança pode ser assustadora.
+                      Mas juntos, podemos transformar esse medo em combustível. A IA é mais do que tecnologia; é uma
+                      parceira que trabalha 24/7, garantindo que seu negócio não esteja apenas no jogo, mas definindo o
+                      ritmo.
                       <br>
-                      Ready to leap into a future where your business is not just growing but thriving, and innovation
-                      isn’t a buzzword but a way of life? Let’s make it happen, together.
-                      <br><br>
-                      To the future, boldly and brilliantly! ✨&quot;
+                      Pronto para saltar para um futuro onde seu negócio não está apenas crescendo, mas prosperando, e
+                      inovação não é um termo da moda, mas um modo de vida? Vamos fazer acontecer, juntos. &quot;
                     </p>
                   </div>
                   <footer class="mt-8">
@@ -428,7 +449,7 @@
                         class="w-16 h-16 mr-2 border-2 rounded-full border-primary" alt="Fernando Ott" data-v-34fd0715>
                       <div class="text-white" data-v-34fd0715>
                         <p class="text-xl font-bold" data-v-34fd0715>Fernando Ott <small>(DevOtts)</small></p>
-                        <p data-v-34fd0715>AI Specialist and Founder of Otimiza.ai</p>
+                        <p data-v-34fd0715>AI Specialist e fundador da Otimiza.ai</p>
                       </div>
                     </div>
                   </footer>
@@ -486,18 +507,19 @@
                   <div class="mt-6 sm:mt-12 sm:text-center" data-v-782fc14d>
                     <h2
                       class="text-3xl font-black tracking-tight text-gray-900 sm:text-4xl md:text-5xl md:leading-tight md:max-w-4xl md:mx-auto"
-                      data-v-782fc14d>Join our community of AI-driven businesses<span class="text-primary"
-                        data-v-782fc14d>.</span></h2>
+                      data-v-782fc14d>Faça parte da nossa comunidade de empresas pioneiras AI-driven<span
+                        class="text-primary" data-v-782fc14d>.</span></h2>
                     <p class="max-w-2xl mx-auto mt-6 italic text-gray-700 sm:text-lg" data-v-782fc14d><span
-                        data-v-782fc14d>“Since implementing AI Boost, our business has experienced a 20% increase in
-                        productivity and a significant reduction in manual errors.”</span><span data-v-782fc14d> - Eva
+                        data-v-782fc14d>“Desde a implementação do AI Boost, nosso negócio experimentou um aumento de 20%
+                        em
+                        produtividade e uma redução significativa de erros manuais.”</span><span data-v-782fc14d> - Eva
                         Miller</span></p>
                   </div>
                   <div class="mt-6 sm:mt-12 sm:mx-auto sm:max-w-lg flex flex-col items-center" data-v-782fc14d>
                     <a style="cursor: pointer;"
-                      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/otimiza-ai/ai-consultancy-discovery'});return false;"
-                      class="ui-button ui-button-base ui-button-primary" data-v-782fc14d>Schedule your
-                      Free Consultancy Call Now</a>
+                      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/otimiza-ai/consultoria-gratuita'});return false;"
+                      class="ui-button ui-button-base ui-button-primary" data-v-782fc14d>Agende seu Consultoria gratuita
+                      agora</a>
                   </div>
                 </div>
               </div>
@@ -508,15 +530,15 @@
             site-name="Otimiza.ai" site-id="pCyauNWbE4LmmhlCwaxw"
             site-logo-url="../assets/images/file-18b706d4-1da8-4eee-abbc-1428cebea373.png" site-url="https://otimiza.ai"
             site-logo-size="xl" hide-site-name="true" header-visible="true" reselecting-images="false" data-v-34fd0715>
-            <h2 class="mb-12 text-4xl font-bold text-center" data-v-34fd0715><span>Let's Talk</span></h2>
-            <p class="mx-auto mt-6 mb-12 max-w-xl text-lg leading-8 text-center">We want to understand your business and
-              if we can help you to boost the productivity and revenue of your business</p>
+            <h2 class="mb-12 text-4xl font-bold text-center" data-v-34fd0715><span>Vamos conversar?</span></h2>
+            <p class="mx-auto mt-6 mb-12 max-w-xl text-lg leading-8 text-center">Queremos entender mais do seu negócio e
+              como podemos te ajudar a aumentar sua produtividade e sua receita.</p>
             <div class="max-w-2xl mx-auto overflow-hidden bg-white rounded-lg shadow" data-v-34fd0715>
               <div class="px-4 py-5 space-y-4 sm:p-6" data-v-34fd0715>
                 <div class="prose prose-user note-text" data-v-34fd0715>
                   <!-- Calendly inline widget begin -->
                   <div class="calendly-inline-widget"
-                    data-url="https://calendly.com/otimiza-ai/ai-consultancy-discovery?primary_color=ff6ab1&hide_landing_page_details=1&hide_gdpr_banner=1"
+                    data-url="https://calendly.com/otimiza-ai/consultoria-gratuita?primary_color=ff6ab1&hide_landing_page_details=1&hide_gdpr_banner=1"
                     style="min-width:320px;height:700px;"></div>
                   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
                     async></script>
@@ -528,7 +550,7 @@
           <footer class="border-t" sectioncomponent="MixoFooter" style="margin-top:0">
             <div class="mx-auto max-w-7xl overflow-hidden py-16 px-6 sm:py-24 lg:px-8 space-y-8">
               <!-- Links --><!-- Socials -->
-              <p class="sm:text-center text-xs leading-5 text-gray-500">© Otimiza.ai - All rights reserved.</p>
+              <p class="sm:text-center text-xs leading-5 text-gray-500">© Otimiza.ai - Todos os direitos reservados.</p>
             </div>
           </footer>
         </div>
@@ -564,11 +586,12 @@
             </div>
             <div class="mt-6 flow-root">
               <div class="-my-6 divide-y divide-gray-500/10">
-                <div class="space-y-2 py-6"><a href="/about"
-                    class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold capitalize leading-7 text-slate-800 hover:bg-gray-400/10">About
-                    Us</a><a href="/product"
-                    class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold capitalize leading-7 text-slate-800 hover:bg-gray-400/10">Product
-                    Page</a></div>
+                <div class="space-y-2 py-6">
+                    <a href="#how-we-help" class="mobile-item-menu -mx-3 block rounded-lg py-2 px-3 text-base font-semibold capitalize leading-7 text-slate-800 hover:bg-gray-400/10">Como podemos ajudar</a>
+                    <a href="#how-we-work" class="mobile-item-menu -mx-3 block rounded-lg py-2 px-3 text-base font-semibold capitalize leading-7 text-slate-800 hover:bg-gray-400/10">Como Trabalhamos</a>
+                    <a href="#vision" class="mobile-item-menu -mx-3 block rounded-lg py-2 px-3 text-base font-semibold capitalize leading-7 text-slate-800 hover:bg-gray-400/10">Nossa Visão</a>                    
+                    <a href="#book-call" class="mobile-item-menu -mx-3 block rounded-lg py-2 px-3 text-base font-semibold capitalize leading-7 text-slate-800 hover:bg-gray-400/10">Agendar Reunião</a>                    
+                </div>
                 <div class="py-6"><!----></div>
               </div>
             </div>
@@ -579,6 +602,20 @@
         style="position: fixed; height: 0px; padding: 0px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></button>
     </div>
   </div>
+  <script>
+    // Your JavaScript here
+
+    function changeLanguage(lang) {
+      $.getJSON(lang + '.json', function (data) {
+        var template = Handlebars.compile($("#content-template").html());
+        var html = template(data);
+        $('#content').html(html);
+      });
+    }
+
+    // Load English content by default
+    changeLanguage('pt');
+  </script>
 </body>
 
 </html>

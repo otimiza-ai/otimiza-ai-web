@@ -9,6 +9,19 @@
     z-index: 1000;
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .language-switcher {
+        position: inherit;
+        top: 10px;
+        right: 50px;
+        display: flex;
+        background-color: #0c00061a;
+        border-radius: 25px;
+        padding: 10px;
+        z-index: 1000;
+    }
+}
 .flag {
     width: 25px;
     height: 25px;

@@ -3,7 +3,7 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
     console.log('oi');
-    $("#close-mobile-menu").click(function(){
+    $("#close-mobile-menu, .mobile-item-menu").click(function(){
         console.log('hide');
         $("#headlessui-portal-root").hide();
     });

@@ -31,6 +31,7 @@
 
   <link rel="stylesheet" href="assets/style-96054763.css">
   <link rel="stylesheet" href="assets/otimiza.css">
+  <link rel="stylesheet" href="assets/plans.css">
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -528,116 +529,135 @@
               </div>
             </div>
           </section>
-          <section id="plans" class="px-4 py-12 sm:py-16 sm:px-6 lg:px-8 md:py-24 bg-white" sectionname="note">
+          <section id="plans" class="px-4 py-12 sm:py-16 sm:px-6 lg:px-8 md:py-24 bg-gray-50">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
-              <div class="mx-auto max-w-4xl text-center">
+              <div class="mx-auto max-w-4xl text-center mb-16">
                 <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Escolha o plano ideal para sua empresa</h2>
               </div>
               
               <div class="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 lg:grid-cols-2">
                 <!-- Discovery Plan -->
-                <div class="flex flex-col rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10">
-                  <div class="mb-12">
-                    <h3 class="text-2xl font-bold tracking-tight text-gray-900">Discovery</h3>
-                    <p class="mt-2 text-base text-gray-600">Diagnóstico completo da sua empresa</p>
-                    
-                    <div class="mt-6 flex items-baseline">
-                      <span class="text-5xl font-bold tracking-tight text-gray-900">R$2.997</span>
-                      <span class="text-lg font-semibold leading-8 text-gray-600">/diagnóstico</span>
+                <div class="plan-card basic">
+                  <div class="flex items-center gap-4">
+                    <div class="plan-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4F46E5">
+                        <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
+                        <path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd" />
+                      </svg>
                     </div>
+                    <h3 class="text-2xl font-bold">Discovery</h3>
                   </div>
-
-                  <a href="#book-call" class="mb-8 block rounded-md bg-blue-600 px-3 py-2 text-center text-sm font-semibold leading-6 text-white hover:bg-blue-500 transition-colors duration-200">
-                    Contratar Discovery
-                  </a>
-
+                  
                   <div>
-                    <p class="text-sm font-semibold text-gray-900">Diagnóstico completo, incluindo:</p>
-                    <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-gray-600">
-                      <li class="flex gap-x-3">
-                        <svg class="h-6 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
-                        </svg>
-                        Diagnóstico completo dos processos operacionais
-                      </li>
-                      <li class="flex gap-x-3">
-                        <svg class="h-6 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
-                        </svg>
-                        Identificação de gargalos
-                      </li>
-                      <li class="flex gap-x-3">
-                        <svg class="h-6 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
-                        </svg>
-                        Plano de ação detalhado
-                      </li>
-                      <li class="flex gap-x-3">
-                        <svg class="h-6 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
-                        </svg>
-                        Relatório estratégico
-                      </li>
-                    </ul>
+                    <div class="flex flex-column items-baseline gap-1">
+                      <span class="price-period">12x de</span>
+                      <span class="price">R$241</span>                      
+                    </div>
+                    <p class="mt-2 text-gray-600">A consultoria Discovery é o primeiro passo para transformar os processos da sua empresa com automação e inteligência artificial. Ideal para empresas que possuem equipe de TI e desejam entender onde estão os maiores potenciais de otimização.  </p>
                   </div>
+
+                  <ul class="feature-list">
+                    <li class="feature-item">
+                      <svg class="w-5 h-5 feature-check" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
+                      </svg>
+                      Diagnóstico completo dos processos operacionais
+                    </li>
+                    <li class="feature-item">
+                      <svg class="w-5 h-5 feature-check" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
+                      </svg>
+                      Identificação de gargalos que podem ser resolvidos com automação ou IA
+                    </li>
+                    <li class="feature-item">
+                      <svg class="w-5 h-5 feature-check" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
+                      </svg>
+                      Reuniões com áreas estratégicas para coleta de informações detalhadas
+                    </li>
+                    <li class="feature-item">
+                      <svg class="w-5 h-5 feature-check" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
+                      </svg>
+                      Entrega de um plano de ação detalhado com recomendações práticas
+                    </li>
+                    <li class="feature-item">
+                      <svg class="w-5 h-5 feature-check" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
+                      </svg>
+                      Relatório estratégico destacando os potenciais ganhos e ROI
+                    </li>
+                    <!-- Add other features -->
+                  </ul>
+
+                  <a href="https://www.asaas.com/c/mn1diqjc6knt9dqt" target="_blank" class="sign-up-btn">Contratar Discovery</a>
+                  <a href="#book-call" class="free-trial">Agende uma primeira conversa gratuita</a>
                 </div>
 
                 <!-- Let's Do It Plan -->
-                <div class="flex flex-col rounded-3xl bg-white p-8 ring-1 ring-blue-600 xl:p-10 relative">
-                  <div class="absolute -top-5 right-8 rounded-full bg-blue-600 px-4 py-1 text-sm font-semibold text-white">
-                    BEST VALUE
-                  </div>
-
-                  <div class="mb-12">
-                    <h3 class="text-2xl font-bold tracking-tight text-gray-900">Let's Do It</h3>
-                    <p class="mt-2 text-base text-gray-600">Diagnóstico + Implementação das soluções</p>
-                    
-                    <div class="mt-6 flex items-baseline">
-                      <span class="text-5xl font-bold tracking-tight text-gray-900">R$4.997</span>
-                      <span class="text-lg font-semibold leading-8 text-gray-600">/mês</span>
+                <div class="plan-card premium">
+                  <div class="flex items-center gap-4">
+                    <div class="plan-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4F46E5">
+                        <path fill-rule="evenodd" d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 00-.584.859 6.753 6.753 0 006.138 5.6 6.73 6.73 0 002.743 1.346A6.707 6.707 0 019.279 15H8.54c-1.036 0-1.875.84-1.875 1.875V19.5h-.75a2.25 2.25 0 00-2.25 2.25c0 .414.336.75.75.75h15a.75.75 0 00.75-.75 2.25 2.25 0 00-2.25-2.25h-.75v-2.625c0-1.036-.84-1.875-1.875-1.875h-.739a6.706 6.706 0 01-1.112-3.173 6.73 6.73 0 002.743-1.347 6.753 6.753 0 006.139-5.6.75.75 0 00-.585-.858 47.077 47.077 0 00-3.07-.543V2.62a.75.75 0 00-.658-.744 49.22 49.22 0 00-6.093-.377c-2.063 0-4.096.128-6.093.377a.75.75 0 00-.657.744zm0 2.629c0 1.196.312 2.32.857 3.294A5.266 5.266 0 013.16 5.337a45.6 45.6 0 012.006-.343v.256zm13.5 0v-.256c.674.1 1.343.214 2.006.343a5.265 5.265 0 01-2.863 3.207 6.72 6.72 0 00.857-3.294z" clip-rule="evenodd" />
+                      </svg>
                     </div>
+                    <h3 class="text-2xl font-bold">Let's Do It</h3>
                   </div>
-
-                  <a href="#book-call" class="mb-8 block rounded-md bg-blue-600 px-3 py-2 text-center text-sm font-semibold leading-6 text-white hover:bg-blue-500 transition-colors duration-200">
-                    Contratar Agora
-                  </a>
-
+                  
                   <div>
-                    <p class="text-sm font-semibold text-gray-900">Tudo do Discovery, mais:</p>
-                    <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-gray-600">
-                      <li class="flex gap-x-3">
-                        <svg class="h-6 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
-                        </svg>
-                        Execução prática das melhorias
-                      </li>
-                      <li class="flex gap-x-3">
-                        <svg class="h-6 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
-                        </svg>
-                        Desenvolvimento de automações
-                      </li>
-                      <li class="flex gap-x-3">
-                        <svg class="h-6 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
-                        </svg>
-                        Treinamento da equipe
-                      </li>
-                      <li class="flex gap-x-3">
-                        <svg class="h-6 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
-                        </svg>
-                        Relatórios periódicos de ROI
-                      </li>
-                    </ul>
+                    <div class="flex flex-column items-baseline gap-1">
+                      <span class="price-period">12x de</span>
+                      <span class="price">R$619</span>
+                      
+                    </div>
+                    <p class="mt-2 opacity-90">A consultoria Let's Do It é perfeito para empresas que não possuem equipe de TI interna ou precisam de suporte contínuo para implementar automações e inteligência artificial. Além do diagnóstico, nosso time coloca a mão na massa para transformar as ideias em realidade.  </p>
                   </div>
+
+                  <ul class="feature-list">
+                    <li class="feature-item">
+                      <svg class="w-5 h-5 feature-check" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
+                      </svg>
+                      Tudo o que o plano Discovery oferece
+                    </li>
+                    <li class="feature-item">
+                      <svg class="w-5 h-5 feature-check" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
+                      </svg>
+                      Execução prática das melhorias planejadas, com suporte direto da equipe
+                    </li>
+                    <li class="feature-item">
+                      <svg class="w-5 h-5 feature-check" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
+                      </svg>
+                      Desenvolvimento de automações personalizadas para seu negócio
+                    </li>
+                    <li class="feature-item">
+                      <svg class="w-5 h-5 feature-check" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
+                      </svg>
+                      Acompanhamento constante para garantir o sucesso das implementações
+                    </li>
+                    <li class="feature-item">
+                      <svg class="w-5 h-5 feature-check" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
+                      </svg>
+                      Treinamento para a equipe interna aproveitar as soluções
+                    </li>
+                    <li class="feature-item">
+                      <svg class="w-5 h-5 feature-check" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
+                      </svg>
+                      Relatórios periódicos com métricas de impacto e ROI
+                    </li>
+                    <!-- Add other features -->
+                  </ul>
+
+                  <a href="https://www.asaas.com/c/jfgr648502vc0lwa" target="_blank" class="sign-up-btn">Contratar Agora</a>
+                  <a href="#book-call" class="free-trial">Agende uma primeira conversa gratuita</a>
                 </div>
               </div>
-
-              <p class="mt-8 text-center text-sm text-gray-600">
-                Tem dúvidas sobre os planos? 
-                <a href="#" class="font-semibold leading-6 text-blue-600 hover:text-blue-500">Entre em contato.</a>
-              </p>
             </div>
           </section>
           <section id="book-call" class="px-4 py-12 sm:py-16 sm:px-6 lg:px-8 md:py-24 bg-primary/10" sectionname="note"

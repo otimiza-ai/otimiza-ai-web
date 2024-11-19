@@ -1,0 +1,105 @@
+.plan-card {
+    padding: 2rem;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .plan-card.basic {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .plan-card.premium {
+    background-color: #4F46E5;
+    color: white;
+  }
+  
+  .plan-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #F3F4F6;
+    border-radius: 12px;
+    padding: 0.75rem;
+  }
+  
+  .premium .plan-icon {
+    background-color: white;
+  }
+
+  .flex-column{
+    flex-direction: column;
+  }
+  
+  .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .price-period {
+    color: #6B7280;
+    font-size: 1rem;
+    margin-bottom: -18px;
+  }
+  
+  .premium .price-period {
+    color: #E5E7EB;
+  }
+  
+  .feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .feature-check {
+    color: #4F46E5;
+  }
+  
+  .premium .feature-check {
+    color: white;
+  }
+  
+  .sign-up-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  
+  .basic .sign-up-btn {
+    background-color: #4F46E5;
+    color: white;
+  }
+  
+  .basic .sign-up-btn:hover {
+    background-color: #4338CA;
+  }
+  
+  .premium .sign-up-btn {
+    background-color: white;
+    color: #4F46E5;
+  }
+  
+  .premium .sign-up-btn:hover {
+    background-color: #F3F4F6;
+  }
+  
+  .free-trial {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6B7280;
+  }
+  
+  .premium .free-trial {
+    color: #E5E7EB;
+  }

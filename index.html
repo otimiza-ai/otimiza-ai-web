@@ -36,6 +36,9 @@
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="assets/scripts/otimiza.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="assets/js/contact-form.js"></script>
 
 </head>
@@ -72,8 +75,7 @@
                   <a href="#how-we-work" class="text-sm font-semibold leading-6 capitalize">Como Trabalhamos</a>
                   <a href="#vision" class="text-sm font-semibold leading-6 capitalize">Nossa Visão</a>
                   <a to="" class="text-sm font-bold font-semibold leading-6 capitalize" style="cursor: pointer;"
-                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/fernando-otimiza/como-podemos-otimizar-sua-empresa'});return false;">Agendar
-                    Call Grátis</a>
+                    href="#book-call">Agendar Call Grátis</a>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:space-x-4"><!----></div>
               </nav>
@@ -99,17 +101,16 @@
                         aumente a produtividade com as ferramentas de IA feitas para o seu negócio.</span></h2>
                   </div>
                   <div class="mt-10 space-y-4">
-                    <p class="text-sm text-gray-400">Vamos conversar? Quero entender como podemos te ajudar</p>
+                    <p class="text-sm text-gray-400">Vamos conversar? O que acha de falar com nossa IA?</p>
                     <ile-root id="ile-3" class="mt-4 sm:max-w-lg" data-v-app="" hydrated="">
                       <form
                         class="grid gap-2 grid-cols-1 sm:w-full sm:flex sm:items-center sm:flex-wrap mt-4 sm:max-w-lg"
-                        data-site-id="pCyauNWbE4LmmhlCwaxw"><label for="hero-email" class="sr-only">Email corporativo
+                        data-site-id="pCyauNWbE4LmmhlCwaxw"><label for="hero-email" class="sr-only">Whatsapp
                         </label><input id="hero-email" type="email"
                           class="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring-primary focus-visible:ring-primary flex-1"
-                          required="" placeholder="Enter your company email...">
+                          required="" placeholder="Seu whatsapp">
                         <div><a to="" class="ui-button ui-button-base ui-button-primary" style="cursor: pointer;"
-                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/fernando-otimiza/como-podemos-otimizar-sua-empresa'});return false;">Agendar
-                            Consultoria Gratuita</a></div>
+                            href="#book-call">Testar IA na prática</a></div>
                         <!-- Calendly link widget begin -->
                         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
                         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"
@@ -692,60 +693,66 @@
                 <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                   Experimente o poder da automação agora mesmo!
                 </h2>
-                
+
                 <p class="mx-auto mt-6 mb-8 max-w-xl text-lg leading-8 text-gray-600" style="margin-bottom: 1rem;">
                   Veja na prática como a IA pode revolucionar sua empresa
                 </p>
-                
-               
+
+
               </div>
-          
+
               <div class="mx-auto max-w-2xl">
                 <div class="contact-card">
                   <div class="mt-8 flex justify-center gap-8">
                     <div class="flex flex-col items-center">
                       <div class="rounded-full bg-green-100 p-3 mb-3">
                         <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                          <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
                         </svg>
                       </div>
                       <span class="text-sm font-medium text-gray-600">Mensagem automática no WhatsApp</span>
                     </div>
-                
+
                     <div class="flex flex-col items-center">
                       <div class="rounded-full bg-blue-100 p-3 mb-3">
                         <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
                       </div>
                       <span class="text-sm font-medium text-gray-600">Ligação automática da IA</span>
                     </div>
                   </div>
-                
+
                   <div class="mt-8 text-lg text-gray-600">
                     <p class="font-medium text-indigo-600">Em menos de 2 minutos você vai:</p>
                     <ul class="mt-4 space-y-2 text-left max-w-lg mx-auto">
                       <li class="flex items-center gap-2">
                         <svg class="w-5 h-5 text-green-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"/>
+                          <path fill-rule="evenodd"
+                            d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
                         </svg>
                         <span>Receber uma mensagem personalizada no WhatsApp</span>
                       </li>
                       <li class="flex items-center gap-2">
                         <svg class="w-5 h-5 text-green-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"/>
+                          <path fill-rule="evenodd"
+                            d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
                         </svg>
                         <span>Atender uma ligação feita por nossa IA</span>
                       </li>
                       <li class="flex items-center gap-2">
                         <svg class="w-5 h-5 text-green-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"/>
+                          <path fill-rule="evenodd"
+                            d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
                         </svg>
                         <span>Ser qualificado para uma reunião via meet</span>
                       </li>
                       <li class="flex items-center gap-2">
                         <svg class="w-5 h-5 text-green-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"/>
+                          <path fill-rule="evenodd"
+                            d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
                         </svg>
                         <span>Se qualificado, nossa IA combinará e agendará o melhor horário para nossa reunião</span>
                       </li>
@@ -757,12 +764,12 @@
                         <label for="name">Nome completo</label>
                         <input type="text" id="name" name="name" required>
                       </div>
-          
+
                       <div class="form-group">
                         <label for="companyName">Nome da empresa</label>
                         <input type="text" id="companyName" name="companyName" required>
                       </div>
-          
+
                       <div class="form-group">
                         <label for="companySize">Tamanho da empresa</label>
                         <select id="companySize" name="companySize" required>
@@ -773,32 +780,34 @@
                           <option value="100+">100+ funcionários</option>
                         </select>
                       </div>
-          
+
                       <div class="form-group">
                         <label for="phoneNumber">Telefone</label>
                         <input type="tel" id="phoneNumber" name="phoneNumber" required>
                       </div>
-          
+
                       <div class="form-group full-width">
                         <label for="email">E-mail</label>
                         <input type="email" id="email" name="email" required>
                       </div>
-          
+
                       <div class="form-group full-width">
                         <label for="description">Como podemos ajudar?</label>
                         <textarea id="description" name="description" rows="4" required></textarea>
                       </div>
                     </div>
-          
+
                     <button type="submit" class="submit-btn">
                       <span class="flex items-center justify-center gap-2">
                         Experimentar automação agora
                         <div class="flex gap-2">
                           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                            <path
+                              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
                           </svg>
                           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                           </svg>
                         </div>
                       </span>

@@ -1,67 +1,190 @@
 $(document).ready(function() {
-    // Phone number mask
-    $('#phoneNumber').mask('+55 (00) 00000-0000', {
-        placeholder: "+55 (00) 00000-0000"
+    // Phone mask
+    $('#phoneNumber').mask('(00) 00000-0000', {
+        placeholder: "(00) 00000-0000"
     });
 
-    // Form validation and submission
-    $('#contactForm').on('submit', function(e) {
-        e.preventDefault();
+    // Custom validation method for WhatsApp (Brazilian numbers)
+    $.validator.addMethod("whatsapp", function(value, element) {
+        value = value.replace(/\D/g, '');
+        return this.optional(element) || /^[1-9][1-9]9\d{8}$/.test(value);
+    }, "Por favor, insira um número de WhatsApp válido");
 
-        // Basic validation
-        const name = $('#name').val().trim();
-        const companyName = $('#companyName').val().trim();
-        const companySize = $('#companySize').val();
-        const phoneNumber = $('#phoneNumber').val().trim();
-        const email = $('#email').val().trim();
-        const description = $('#description').val().trim();
+    // Custom validation method for company email
+    $.validator.addMethod("corporate", function(value, element) {
+        const freeEmails = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'live.com', 'bol.com.br', 'uol.com.br'];
+        const domain = value.split('@')[1];
+        return this.optional(element) || !freeEmails.includes(domain.toLowerCase());
+    }, "Por favor, use seu e-mail corporativo");
 
-        // Validate email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Por favor, insira um e-mail válido');
-            return;
-        }
-
-        // Validate phone number
-        if (phoneNumber.replace(/\D/g, '').length !== 13) {
-            alert('Por favor, insira um número de telefone válido');
-            return;
-        }
-
-        // Prepare data for submission
-        const formData = {
-            name,
-            companyName,
-            companySize,
-            phoneNumber: phoneNumber.replace(/\D/g, ''), // Remove non-digits
-            email,
-            description
-        };
-
-        // Disable submit button and show loading state
-        const submitButton = $(this).find('button[type="submit"]');
-        const originalButtonText = submitButton.text();
-        submitButton.prop('disabled', true).text('Enviando...');
-
-        // Submit form
-        $.ajax({
-            url: 'https://webhookn8n.otimiza.ai/webhook/main_sdr_agent',
-            method: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify(formData),
-            success: function(response) {
-                alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
-                $('#contactForm')[0].reset();
+    // Initialize form validation
+    const validator = $("#contactForm").validate({
+        // Force validation on all fields immediately when submitting
+        onkeyup: false,
+        onfocusout: false,
+        onclick: false,
+        
+        errorElement: 'span',
+        errorClass: 'error-message',
+        validClass: 'success',
+        
+        // Highlight error fields
+        highlight: function(element, errorClass, validClass) {
+            $(element)
+                .addClass('error-input')
+                .removeClass(validClass);
+            
+            $(element).closest('.form-group').addClass('has-error');
+            
+            // Add shake animation to highlight errors
+            $(element).closest('.form-group').addClass('shake-error');
+            setTimeout(() => {
+                $(element).closest('.form-group').removeClass('shake-error');
+            }, 500);
+        },
+        
+        // Remove highlighting from valid fields
+        unhighlight: function(element, errorClass, validClass) {
+            $(element)
+                .removeClass('error-input')
+                .addClass(validClass);
+            
+            $(element).closest('.form-group').removeClass('has-error');
+        },
+        
+        // Validation rules
+        rules: {
+            name: {
+                required: true,
+                minlength: 3
             },
-            error: function(xhr, status, error) {
-                alert('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.');
-                console.error('Error:', error);
+            companyName: {
+                required: true,
+                minlength: 2
             },
-            complete: function() {
-                // Re-enable submit button and restore text
-                submitButton.prop('disabled', false).text(originalButtonText);
+            companySize: {
+                required: true
+            },
+            phoneNumber: {
+                required: true,
+                whatsapp: true
+            },
+            email: {
+                required: true,
+                email: true,
+                corporate: true
+            },
+            description: {
+                required: true,
+                minlength: 10
             }
-        });
+        },
+        
+        // Custom error messages
+        messages: {
+            name: {
+                required: "Nome é obrigatório",
+                minlength: "O nome deve ter pelo menos 3 caracteres"
+            },
+            companyName: {
+                required: "Nome da empresa é obrigatório",
+                minlength: "O nome da empresa deve ter pelo menos 2 caracteres"
+            },
+            companySize: {
+                required: "Selecione o tamanho da empresa"
+            },
+            phoneNumber: {
+                required: "WhatsApp é obrigatório"
+            },
+            email: {
+                required: "E-mail é obrigatório",
+                email: "Insira um e-mail válido"
+            },
+            description: {
+                required: "Descrição é obrigatória",
+                minlength: "A descrição deve ter pelo menos 10 caracteres"
+            }
+        },
+        
+        // Handle form submission
+        submitHandler: function(form) {
+            const submitButton = $(form).find('button[type="submit"]');
+            const originalText = submitButton.html();
+            
+            submitButton.prop('disabled', true).html(`
+                <span class="flex items-center gap-2">
+                    <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Enviando...
+                </span>
+            `);
+
+            const formData = {
+                name: $('#name').val().trim(),
+                companyName: $('#companyName').val().trim(),
+                companySize: $('#companySize').val(),
+                phoneNumber: $('#phoneNumber').val().replace(/\D/g, ''),
+                email: $('#email').val().trim(),
+                description: $('#description').val().trim()
+            };
+
+            $.ajax({
+                url: 'https://webhookn8n.otimiza.ai/webhook/main_sdr_agent',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function(response) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Sucesso!',
+                        text: 'Em breve você receberá uma mensagem no WhatsApp e uma ligação da nossa IA!',
+                        confirmButtonColor: '#4F46E5'
+                    });
+                    form.reset();
+                    // Remove success classes after reset
+                    $('.success').removeClass('success');
+                },
+                error: function(xhr, status, error) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Ops!',
+                        text: 'Ocorreu um erro ao enviar seus dados. Por favor, tente novamente.',
+                        confirmButtonColor: '#4F46E5'
+                    });
+                    console.error('Error:', error);
+                },
+                complete: function() {
+                    submitButton.prop('disabled', false).html(originalText);
+                }
+            });
+        }
+    });
+
+    // Handle submit button click
+    $('#contactForm button[type="submit"]').on('click', function(e) {
+        e.preventDefault();
+        
+        // Trigger validation on all fields
+        validator.form();
+        
+        // If there are errors, show them all and scroll to the first error
+        if (!$("#contactForm").valid()) {
+            const firstError = $('.error-input').first();
+            if (firstError.length) {
+                $('html, body').animate({
+                    scrollTop: firstError.offset().top - 100
+                }, 500);
+            }
+            
+            // Show error toast
+            Swal.fire({
+                icon: 'warning',
+                title: 'Atenção!',
+                text: 'Por favor, preencha todos os campos obrigatórios corretamente.',
+                confirmButtonColor: '#4F46E5'
+            });
+        }
     });
 }); 

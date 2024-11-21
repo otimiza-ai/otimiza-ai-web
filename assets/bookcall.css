@@ -119,3 +119,38 @@
 .contact-card .text-green-600 {
   color: #10B981;
 }
+
+/* Form validation styles */
+.error-input {
+    border-color: #DC2626 !important;
+    background-color: #FEF2F2 !important;
+}
+
+.has-error label {
+    color: #DC2626;
+}
+
+.error-message {
+    color: #DC2626;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.success {
+    border-color: #059669 !important;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}

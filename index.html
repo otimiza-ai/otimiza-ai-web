@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="assets/style-96054763.css">
   <link rel="stylesheet" href="assets/otimiza.css">
   <link rel="stylesheet" href="assets/plans.css">
+  <link rel="stylesheet" href="assets/bookcall.css">
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -685,71 +686,57 @@
             </div>
           </section>
 
-          <section id="book-call" class="px-4 py-12 sm:py-16 sm:px-6 lg:px-8 md:py-24 bg-primary/10" sectionname="note"
-            id="note" sectioncomponent="Note" sectionlabel="Notes" sortorder="5" section-component="Note"
-            site-name="Otimiza.ai" site-id="pCyauNWbE4LmmhlCwaxw"
-            site-logo-url="../assets/images/file-18b706d4-1da8-4eee-abbc-1428cebea373.png" site-url="https://otimiza.ai"
-            site-logo-size="xl" hide-site-name="true" header-visible="true" reselecting-images="false" data-v-34fd0715>
-            <h2 class="mb-12 text-4xl font-bold text-center" data-v-34fd0715><span>Quer ver uma automação na prática?</span></h2>
-            <p class="mx-auto mt-6 mb-12 max-w-xl text-lg leading-8 text-center">Preencha seus dados e nossa IA irá te chamar no whatsapp e te ligar!</p>
-            <div class="max-w-2xl mx-auto overflow-hidden bg-white rounded-lg shadow" data-v-34fd0715>
-              <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="mx-auto max-w-4xl text-center mb-16">
-                 
-                </div>
-
-                <div class="mx-auto max-w-xl">
+          <section id="book-call" class="px-4 py-12 sm:py-16 sm:px-6 lg:px-8 md:py-24 bg-primary/10">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+              <div class="mx-auto max-w-4xl text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Quer ver uma automação na prática?</h2>
+                <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">Preencha seus dados e nossa IA irá te chamar no whatsapp e te ligar!</p>
+              </div>
+          
+              <div class="mx-auto max-w-2xl">
+                <div class="contact-card">
                   <form id="contactForm" class="space-y-6">
-                    <div>
-                      <label for="name" class="block text-sm font-medium text-gray-700">Nome completo</label>
-                      <input type="text" id="name" name="name" required
-                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    <div class="form-grid">
+                      <div class="form-group">
+                        <label for="name">Nome completo</label>
+                        <input type="text" id="name" name="name" required>
+                      </div>
+          
+                      <div class="form-group">
+                        <label for="companyName">Nome da empresa</label>
+                        <input type="text" id="companyName" name="companyName" required>
+                      </div>
+          
+                      <div class="form-group">
+                        <label for="companySize">Tamanho da empresa</label>
+                        <select id="companySize" name="companySize" required>
+                          <option value="">Selecione uma opção</option>
+                          <option value="1-10">1-10 funcionários</option>
+                          <option value="11-50">11-50 funcionários</option>
+                          <option value="51-100">51-100 funcionários</option>
+                          <option value="100+">100+ funcionários</option>
+                        </select>
+                      </div>
+          
+                      <div class="form-group">
+                        <label for="phoneNumber">Telefone</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                      </div>
+          
+                      <div class="form-group full-width">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                      </div>
+          
+                      <div class="form-group full-width">
+                        <label for="description">Como podemos ajudar?</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                      </div>
                     </div>
-
-                    <div>
-                      <label for="companyName" class="block text-sm font-medium text-gray-700">Nome da empresa</label>
-                      <input type="text" id="companyName" name="companyName" required
-                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                    </div>
-
-                    <div>
-                      <label for="companySize" class="block text-sm font-medium text-gray-700">Tamanho da
-                        empresa</label>
-                      <select id="companySize" name="companySize" required
-                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                        <option value="">Selecione uma opção</option>
-                        <option value="1-10">1-10 funcionários</option>
-                        <option value="11-50">11-50 funcionários</option>
-                        <option value="51-100">51-100 funcionários</option>
-                        <option value="100+">100+ funcionários</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label for="phoneNumber" class="block text-sm font-medium text-gray-700">Telefone</label>
-                      <input type="tel" id="phoneNumber" name="phoneNumber" required
-                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                    </div>
-
-                    <div>
-                      <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
-                      <input type="email" id="email" name="email" required
-                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                    </div>
-
-                    <div>
-                      <label for="description" class="block text-sm font-medium text-gray-700">Como podemos
-                        ajudar?</label>
-                      <textarea id="description" name="description" rows="4" required
-                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
-                    </div>
-
-                    <div>
-                      <button type="submit"
-                        class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Agendar conversa
-                      </button>
-                    </div>
+          
+                    <button type="submit" class="submit-btn">
+                      Agendar conversa
+                    </button>
                   </form>
                 </div>
               </div>

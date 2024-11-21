@@ -1,3 +1,9 @@
+#contactForm {
+  margin-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 2rem;
+}
+
 .contact-card {
   padding: 2rem;
   border-radius: 24px;
@@ -87,3 +93,7 @@
   font-size: 0.75rem;
   margin-top: 0.25rem;
 } 
+
+.contact-card .text-green-600 {
+  color: #10B981;
+}

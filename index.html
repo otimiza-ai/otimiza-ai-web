@@ -760,40 +760,82 @@
                   </div>
                   <form id="contactForm" class="space-y-6">
                     <div class="form-grid">
+                      <!-- Name field -->
                       <div class="form-group">
                         <label for="name">Nome completo</label>
-                        <input type="text" id="name" name="name" required>
+                        <div class="input-with-icon">
+                          <svg class="input-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                          </svg>
+                          <input type="text" id="name" name="name" required placeholder="Ex: João da Silva">
+                        </div>
                       </div>
 
+                      <!-- Company name field -->
                       <div class="form-group">
                         <label for="companyName">Nome da empresa</label>
-                        <input type="text" id="companyName" name="companyName" required>
+                        <div class="input-with-icon">
+                          <svg class="input-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                              d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
+                          </svg>
+                          <input type="text" id="companyName" name="companyName" required placeholder="Ex: Otimiza.ai">
+                        </div>
                       </div>
 
+                      <!-- Company size field -->
                       <div class="form-group">
                         <label for="companySize">Tamanho da empresa</label>
-                        <select id="companySize" name="companySize" required>
-                          <option value="">Selecione uma opção</option>
-                          <option value="1-10">1-10 funcionários</option>
-                          <option value="11-50">11-50 funcionários</option>
-                          <option value="51-100">51-100 funcionários</option>
-                          <option value="100+">100+ funcionários</option>
-                        </select>
+                        <div class="input-with-icon">
+                          <svg class="input-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                              d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                          </svg>
+                          <select id="companySize" name="companySize" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="1-10">1-10 funcionários</option>
+                            <option value="11-50">11-50 funcionários</option>
+                            <option value="51-100">51-100 funcionários</option>
+                            <option value="100+">100+ funcionários</option>
+                          </select>
+                        </div>
                       </div>
 
+                      <!-- Phone number field -->
                       <div class="form-group">
-                        <label for="phoneNumber">Telefone</label>
-                        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                        <label for="phoneNumber">WhatsApp</label>
+                        <div class="input-with-icon">
+                          <svg class="input-icon whatsapp" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                          </svg>
+                          <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                        </div>
                       </div>
 
+                      <!-- Email field -->
                       <div class="form-group full-width">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email">E-mail corporativo</label>
+                        <div class="input-with-icon">
+                          <svg class="input-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                          </svg>
+                          <input type="email" id="email" name="email" placeholder="exemplo@empresa.com" required>
+                        </div>
                       </div>
 
+                      <!-- Description field -->
                       <div class="form-group full-width">
                         <label for="description">Como podemos ajudar?</label>
-                        <textarea id="description" name="description" rows="4" required></textarea>
+                        <div class="input-with-icon textarea">
+                          <svg class="input-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                              d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
+                          </svg>
+                          <textarea id="description" name="description" rows="4" required placeholder="Ex: Gostaria de automatizar o atendimento ao cliente para reduzir o tempo de resposta e melhorar a satisfação dos clientes."></textarea>
+                        </div>
                       </div>
                     </div>
 

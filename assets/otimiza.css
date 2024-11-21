@@ -1,3 +1,8 @@
+:root {
+  --primary: #4337C9;
+  --primary-rgb: 67, 55, 201;
+}
+
 .language-switcher {
     position: fixed;
     top: 10px;
@@ -37,4 +42,17 @@
 #brazil {
     background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1280px-Flag_of_Brazil.svg.png');
     background-size: cover;
+}
+
+/* If you have any specific pink color references like: */
+.text-primary {
+  color: rgb(67, 55, 201);
+}
+
+.bg-primary {
+  background-color: rgb(67, 55, 201);
+}
+
+.border-primary {
+  border-color: rgb(67, 55, 201);
 }

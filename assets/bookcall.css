@@ -258,7 +258,7 @@ select {
 }
 
 /* Link colors */
-a:hover {
+#book-call a:hover {
     color: #4337C9;
 }
 

@@ -65,13 +65,14 @@
   border-radius: 9999px;
   font-weight: 600;
   text-align: center;
-  background-color: #4337C9;
   color: white;
   transition: all 0.2s;
   margin-top: 1.5rem;
   font-size: 1.125rem;
   position: relative;
   overflow: hidden;
+  background-color: #25D366;
+  border: 1px solid #00ae41;
 }
 
 .submit-btn:hover {

@@ -166,11 +166,72 @@ $(document).ready(function() {
     $('#contactForm button[type="submit"]').on('click', function(e) {
         e.preventDefault();
         
-        // Trigger validation on all fields
-        validator.form();
+        // Get the button element
+        const submitButton = $(this);
         
-        // If there are errors, show them all and scroll to the first error
-        if (!$("#contactForm").valid()) {
+        // If the button is disabled, don't proceed
+        if (submitButton.prop('disabled')) {
+            return;
+        }
+        
+        // Trigger validation on all fields
+        if ($("#contactForm").valid()) {
+            // Disable button and show loading state
+            submitButton.prop('disabled', true);
+            const originalText = submitButton.html();
+            submitButton.html(`
+                <span class="flex items-center gap-2">
+                    <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Enviando...
+                </span>
+            `);
+
+            // Prepare form data
+            const formData = {
+                name: $('#name').val().trim(),
+                companyName: $('#companyName').val().trim(),
+                companySize: $('#companySize').val(),
+                phoneNumber: '+55' + $('#phoneNumber').val().replace(/\D/g, ''),
+                email: $('#email').val().trim(),
+                description: $('#description').val().trim()
+            };
+
+            // Submit form
+            $.ajax({
+                url: 'https://webhookn8n.otimiza.ai/webhook/main_sdr_agent',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function(response) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Sucesso!',
+                        text: 'Em breve você receberá uma mensagem no WhatsApp e uma ligação da nossa IA!',
+                        confirmButtonColor: '#4337C9'
+                    });
+                    $("#contactForm")[0].reset();
+                    // Remove success classes after reset
+                    $('.success').removeClass('success');
+                },
+                error: function(xhr, status, error) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Ops!',
+                        text: 'Ocorreu um erro ao enviar seus dados. Por favor, tente novamente.',
+                        confirmButtonColor: '#4337C9'
+                    });
+                    console.error('Error:', error);
+                },
+                complete: function() {
+                    // Re-enable button and restore original text
+                    submitButton.prop('disabled', false).html(originalText);
+                }
+            });
+        } else {
+            // If validation fails, scroll to first error
             const firstError = $('.error-input').first();
             if (firstError.length) {
                 $('html, body').animate({
@@ -183,7 +244,7 @@ $(document).ready(function() {
                 icon: 'warning',
                 title: 'Atenção!',
                 text: 'Por favor, preencha todos os campos obrigatórios corretamente.',
-                confirmButtonColor: '#4F46E5'
+                confirmButtonColor: '#4337C9'
             });
         }
     });

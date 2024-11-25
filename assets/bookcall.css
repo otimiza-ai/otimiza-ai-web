@@ -273,3 +273,38 @@ select {
     outline: 2px solid #4337C9;
     outline-offset: 2px;
 }
+
+/* Alert Box Styles */
+.alert-box {
+  background-color: rgba(var(--primary-rgb), 0.1);
+  border-left: 4px solid var(--primary);
+  border-radius: 4px;
+  padding: 16px 20px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.alert-box::before {
+  content: "😍";
+  margin-right: 12px;
+  font-size: 20px;
+}
+
+.alert-message {
+  color: var(--primary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .alert-box {
+    padding: 12px 16px;
+  }
+  
+  .alert-message {
+    font-size: 0.9rem;
+  }
+}
